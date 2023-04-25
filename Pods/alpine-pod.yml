@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-pod
+spec:
+  containers:
+    - image: alpine:3.17
+      name: alpine-container
+      ports:
+        - containerPort: 80
+      command:
+        - sleep
+      args:
+        - 1d 
