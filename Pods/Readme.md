@@ -83,3 +83,8 @@ KUBERNETES NETWORKING MODEL
 * pod knows the ip address, the other pod should also recognise the ip address as same 
 * Net Filters and IP ranges 
 * every pods gets a unique IP address 
+
+
+LABELS: 
+
+* To Query the pods we will be using pod lables 
