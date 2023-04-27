@@ -1,0 +1,12 @@
+---
+apiVersion: vi
+kind: Pod 
+metadata: 
+  name: exp-pod
+spec:
+  containers:
+    - name: exp
+      image: alpine
+      command: 
+        - sleep
+        - 1d
