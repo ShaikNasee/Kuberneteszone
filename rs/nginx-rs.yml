@@ -1,5 +1,5 @@
 ---
-apiVersion: app/v1 
+apiVersion: apps/v1 
 kind: ReplicaSet
 metadata:
   name: jenkins
@@ -14,8 +14,7 @@ spec:
     metadata:
       name: jenkins
       labels: 
-        app: jenkins 
-        ver: "1.23"
+        app: jenkins
     spec:
       containers:
         - name: jenkins 
