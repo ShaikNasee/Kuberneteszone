@@ -2,11 +2,10 @@
 apiVersion: app/v1 
 kind: ReplicaSet
 metadata:
-  name: jenkinspod
+  name: jenkins
   labels:
     app: jenkins
 spec:
-  minReadySeconds: 5
   replicas: 5
   selector:
     matchLabels:
@@ -19,15 +18,12 @@ spec:
         ver: "1.23"
     spec:
       containers:
-        - name: jenkins-container  
+        - name: jenkins 
           image: jenkins/jenkins:lts-jdk11
           ports:
             - containerPort: 8080
               protocol: TCP
       initContainers:
-        - name: alpine-container 
+        - name: alpine 
           image: alpine:3.16
-          command:
-            - ping -c 4 
-          arg: 
-            - google.com 
+          command: ["ping", "-c", "4", "google.com" ]
