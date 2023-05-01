@@ -46,6 +46,8 @@ sudo apt-mark hold kubelet kubeadm kubectl
 ```
 Note: follow the official documentation whenever your installing the k8s link given above for all the steps
 * become root user 
+* initialize the k8s cluster by following command in the master node 
+`kubeadm init --pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock`
 
 `sudo -i `
 `kubeadm init --pod-network-cidr=10.244.0.0/16 --cri-socket=unix:///var/run/cri-dockerd.sock `
@@ -53,7 +55,7 @@ Note: follow the official documentation whenever your installing the k8s link gi
 ```
 To start using your cluster, you need to run the following as a regular user:
 
-  mkdir -p $HOME/.kube
+    
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
@@ -88,3 +90,16 @@ KUBERNETES NETWORKING MODEL
 LABELS: 
 
 * To Query the pods we will be using pod lables 
+
+
+
+Topics:
+* Replica set
+* Replication Controller
+* kubernetes UI
+* kubernetes metrics
+* kuberntes labels
+
+* kubernetes serviec is an virtual ip it exit on master , service is a routing rule 
+* clusterIp : an ip with in the cluster so you cannot access it outside world
+

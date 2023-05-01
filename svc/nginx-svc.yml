@@ -4,7 +4,7 @@ kind: Service
 metadata: 
   name: nginx-svc
 spec:
-  type: ClusterIP
+  type: ClusterIP 
   selector: 
     app: nginx 
     ver: "1.0"
