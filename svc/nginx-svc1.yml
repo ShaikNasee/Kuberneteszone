@@ -8,5 +8,5 @@ spec:
     - name: webport1
       port: 35000
       targetPort: 80
-      nodePort: 8080
+      nodePort: 32002
       protocol: TCP
